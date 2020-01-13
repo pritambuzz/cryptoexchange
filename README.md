@@ -1,5 +1,479 @@
 
-[![Build Status](https://travis-ci.org/coingecko/cryptoexchange.svg)](https://travis-ci.org/coingecko/cryptoexchange)
+ 
+
+Table of Contents
+
+1   Introduction	2
+1.1 Mining Rates	2
+2  The Fundamental Idea of a Cryptocurrency Exchange Application	3
+3  Description of App	4
+3.1 Screens	5
+4  Project Implementation Methods	11
+5  Cryptocurrency exchange markets and trading APIs	12
+6  POS integration with wallet	13
+7  Duration for Cryptocurrency Exchange App Development	15
+8  Team Req for the Cryptocurrency Exchange Web-Based App and Mobile App Development	15
+9  Team Req for the Cryptocurrency Exchange Basic Web Portal and Mobile App	15
+10  Mobile App and Web Based Application Development Costs Table	16
+11  Mobile App and Web Based Application Development Costs Table	16
+12  Mobile App and Basic Web Portal Development Costs Table	15
+13  In closing	18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction to Crypto Currency
+Cryptocurrency is a kind of digital currency. Registration and emission are determined using asymmetric cryptography using various cryptographic protection approaches, like Proof-of-stake and Proof-of-work. Cryptocurrency systems operate on a peer-to-peer network and are decentralized. That said, emissions are not possible. It can’t be counterfeited or destroyed. The biggest benefit, though, is the difficulty that comes with mining. In short, mining with a farm of GPUs will hardly be worthwhile.
+Mining Rates
+Let’s try to calculate for comparison’s sake. The smallest mining “farm” holding 6 GPUs has a starting price of about $5000. Essentially, the mining scheme is based on a mathematical equation. The more people mine, the more resources for cryptocurrency become attainable, making these equations more troublesome to solve. As such, while Bitcoin is currently the highest it’s ever been, currently sitting at $3000 apiece, it will take a while to locate a single coin and even longer for the tiniest of farm recoupments. Browsing the web, you’ll discover warehouses rented out by fanatics with more GPUs than you have ever seen. As such, the costs to run such places are pricey. Further, a high-performance farm’s work will need to be supported. The electricity bill for maintenance alone is more than the starting price. At some point, the mined Bitcoin exchange will surpass the farm owner’s financial stability. Just another hassle that will make you disinterested in cryptocurrency mining.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Fundamental Idea of a Cryptocurrency Exchange Application 
+Because the odds of making a profit at this point are low, the only way to reap the rewards of cryptocurrency is help people already engaging in cryptocurrency. It can pay to be an intermediary, just as much as it can by being a manufacturer or executor. That’s a difficult to contest business rule. Recent trends indicate that mobile cryptocurrency exchange apps will be in demand, especially with the booming popularity of banking operations using Ethereum and Bitcoin, particularly with alluring features like small transaction fees. An overwhelming amount of people are finding out about cryptocurrencies and its substantially low transaction costs. Most people are using cryptocurrencies for money orders all over the country since it’s quicker and cheaper. It’s just a question of time before Bitcoin is used predominantly by the mass market.
+As referenced earlier, trading platforms are the best way to profit using cryptocurrencies. Let’s look into how the cryptocurrency exchange app does things like transfer money in cryptocurrency and convert Bitcoins into a natural currency of your choosing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description of the App
+The cryptocurrency exchange app works as follows:
+To begin with, the user registers to be part of the system and obtains an individual cryptocurrency wallet. Bitcoins and other currencies can be stored in this wallet.
+When money is sent, the user conducts a transaction through the system. Afterward, funds are loaded to the user’s account on the app server. The user then chooses where the money will go and the currency it will be sent in.
+What happens next can be done without the user’s assistance.
+Purchase of the cryptocurrency is completed by the system on the server side, and the end user’s engagement isn’t required either. Afterward, the foreign currency is bought after the cryptocurrency is sold. The final step involves the user receiving the funds in the currency of their choice into their bank account.
+That said, studies show that this isn’t feasible to perform the exchange application process automatically because no platforms have an API to have money withdrawn from a bank account. With the exception of ones that permit money transfers into “confirmed” accounts, an exchange is contingent on the money transfer’s direction.
+A successful transaction involves the foreign currency being sent to an account with a native currency. Once an account is established, the user confirms their account. Lastly, the transaction is automatically completed. In short, the cryptocurrency exchange app can be automatic with the exception of one step: the recipient needs to designate the wallet in a new account as “confirmed.”
+However, if money is transferred from a confirmed account, the process becomes more troublesome and must be conducted differently. The most optimal approach is to team up with those who issue cryptocurrency debit cards. In the event money doesn’t warrant withdrawal, cryptocurrency can be loaded onto these cards.
+When funds are sent to the natural currency, here’s what’s implemented in the cryptocurrency exchange application:
+
+
+
+
+
+
+
+
+
+
+Login/Register page of the cryptocurrency exchange application
+ 
+
+
+
+
+
+
+
+
+
+
+
+Account ID verification with the list of available wallets
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Money transfer screen
+ 
+
+
+
+
+
+
+
+
+Transactions history screen
+ 
+
+
+
+
+
+
+
+
+Cryptocurrency conversion screen
+ 
+
+The website will have an API via a backend service that both iOS and Android devices can use. It will allow for:
+•	The creation of accounts.
+•	Request for a money deposit.
+•	Requests to send money.
+•	Cryptocurrency > Currency exchange proxy APIs.
+•	Management of bank accounts.
+Public APIs include the following:
+•	market data
+•	instruments/trading pairs
+•	price feeds (exchange rates)
+•	order books
+•	trade history
+•	tickers
+•	OHLC(V) for charting
+•	other public endpoints
+For trading with private APIs you need to obtain API keys from/to exchange markets. It often means registering with exchanges and creating API keys with your account. Most exchanges require personal info or identification. Some kind of verification may be necessary as well. If you want to trade you need to register yourself, this library will not create accounts or API keys for you. Some exchange APIs expose interface methods for registering an account from within the code itself, but most of exchanges don't. You have to sign up and create API keys with their websites.
+Private APIs allow the following:
+•	manage personal account info
+•	query account balances
+•	trade by making market and limit orders
+•	deposit and withdraw fiat and crypto funds
+•	query personal orders
+•	get ledger history
+•	transfer funds between accounts
+•	use merchant services
+This library implements full public and private REST APIs for all exchanges. WebSocket and FIX implementations in JavaScript, PHP, Python and other languages.
+The Xpander library supports both camelcase notation (preferred in JavaScript) and underscore notation (preferred in Python and PHP), therefore all methods can be called in either notation or coding style in any language.
+Afterward, a backend portal will be implemented into the exchange application, which will allow the user to modify the information on his profile.
+Lastly, there are multiple platforms for the cryptocurrency exchange app. Both Android and iOS apps operate the same way and execute the same functions.
+
+
+
+
+
+
+
+Project Implementation Methods
+The project’s intended functionality can be accomplished in similar ways regarding backend and UX. The initial choice is to install the mobile cryptocurrency exchange app on a user’s web-based application or mobile device that resembles an Android or iOS app and copies the app’s functions. Another choice is to minimize the development fees and decrease the go-to market time. Startups must begin with the development of a mobile app and return to making a web-based cryptocurrency exchange app afterward. 
+We’ve calculated some of the approximate durations, human resources, and budgets required for both instances: developing a mobile exchange app and a web-based version simultaneously and a mobile app with a basic site.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Following are the cryptocurrency exchange markets and trading APIs:
+country / region	name	doc
+Argentina	SouthXchange
+API
+
+Australia	ACX
+API
+
+Australia	BTC Markets
+API
+
+Australia	CoinSpot
+API
+
+Australia	Independent Reserve
+API
+
+Austria	VirWoX
+API
+
+Brazil	Bleutrade
+API
+
+Brazil	Braziliex
+API
+
+Brazil	flowBTC
+API
+
+Brazil	FoxBit
+API
+
+Brazil	Mercado Bitcoin
+API
+
+Brazil	NegocieCoins
+API
+
+British Virgin Islands	Bitfinex
+API
+
+British Virgin Islands	Bitfinex v2
+API
+
+British Virgin Islands	Ethfinex
+API
+
+Bulgaria	Coingi
+API
+
+Canada	Allcoin
+API
+
+Canada	QuadrigaCX
+API
+
+Chile	ChileBit
+API
+
+China	Bibox
+API
+
+China	bitkk
+API
+
+China	BTCChina
+API
+
+China	CHBTC
+API
+
+China	CoinEgg
+API
+
+China	CoinEx
+API
+
+China	Coingi
+API
+
+China	EXX
+API
+
+China	Gate.io
+API
+
+China	HADAX
+API
+
+China	Huobi
+API
+
+China	Huobi CNY
+API
+
+China	Huobi Pro
+API
+
+China	jubi.com
+API
+
+China	LBank
+API
+
+China	OKCoin CNY
+API
+
+China	OKCoin USD
+API
+
+China	OKEX
+API
+
+China	QRYPTOS
+API
+
+China	YUNBI
+API
+
+China	ZB
+API
+
+Cyprus	CEX.IO
+API
+
+Czech Republic	CoinMate
+API
+
+EU	BitBay
+API
+
+EU	Bitlish
+API
+
+EU	BitMarket
+API
+
+EU	BL3P
+API
+
+EU	BTCX
+API
+
+
+
+
+
+
+
+
+
+POS Integration with app wallet
+The idea was to build a simple all-in-one solution for small businesses wanting to accept Crypto Currency. We use cheap, easily available components to build the minimal setup necessary to accept Crypto Currency at a register.
+The cashier type’s payment total on a numpad, a QR code is generated for the customer to scan, and a confirmation message is displayed when the payment is received.
+The device is a numpad with a 2x16 character LCD display that a cashier interacts with, and a small LCD display facing the customer.
+The typical interaction in a business:
+•	Cashier asks how the customer will pay
+•	Customer replies ‘In any crypto currency’
+•	Cashier enters total in to the device via numberpad, total appears on 2x16 character display
+•	Cashier presses enter
+•	QR code and dollar and crypto currency amount appear on LCD in front of customer
+•	Customer scans QR code which initiates crypto currency transaction (using blockchain or other app)
+•	Device displays confirmation message on LCD and character display upon bitcoin transaction confirmation (uses the unconfirmed transaction confirmation)
+•	The payment is optionally sent to a forwarding address
+Cashier Manual:
+•	The display shows "Payment Amount". Type in total amount or calculate total then press enter.
+•	The display shows "Payment Entered" followed by "QR Code Ready" when the QR code is ready for the customer.
+•	If you need to cancel the payment, you can press Backspace three times in a row to cancel the transaction. The display will say "Payment Canceled", press enter to clear and begin a new transaction.
+•	Once the transaction is confirmed, the display shows "Transaction Approved".
+The Materials Used:
+•	Raspberry Pi
+•	3.2” LCD RCA output Monitor
+•	2x16 character LED display
+•	USB numpad
+•	12v 1a power supply
+•	Raspberry Pi enclosure
+•	5v step down regulator (ripped from phone car-charger)
+•	micro-usb adapter male tip
+•	RCA male-to-male adapter or RCA cable
+Steps to Build Device:
+•	Attach 2x16 character display to Raspberry Pi
+•	solder together the 3.2” display’s power wires, power supply wires, and 5v step-down converter’s input wires positive to positive to positive and negative to negative to negative.
+•	solder together the micro-USB wires to the 5v step-down converter’s output wires positive to positive and negative to negative
+•	plug the micro-USB tip into the Raspberry Pi
+•	plug RCA male-to-male adapter into the Raspberry Pi and the 3.2” LCD screen
+•	plug numpad in Raspberry Pi’s USB port *enclose Raspberry Pi, step-down regulator, and wires (leaving hole for ethernet cable--otherwise plug in ethernet cable first)
+Security Considerations:
+•	the blockchain.info identifier and password are stored on the device in plaintext -- don't store more money on the account than you can afford to lose
+•	sending payments to a forwarding address currently defaults with a 0.0005BTC transaction fee
+•	Don’t use a usb wireless adapter, use an ethernet cable. Using a wireless adapter is just asking for trouble from snoopers (even though all internet communication is supposedly encrypted over SSL)
+•	Ideally, use an enclosure that doesn’t expose any ports to the pi.
+•	Double check that forwarding address if you use it.
+•	Payment is defaulted to be ‘confirmed’ by the device after the unconfirmed transaction is reported. Watch out for double-spends! You’d probably best not to use this for high value purchases.
+
+
+
+
+
+
+
+
+
+
+
+
+Duration for Cryptocurrency Exchange App Development
+Based on our calculations, it should only take half a year to finish this project.
+Team Required for the Cryptocurrency Exchange Web-Based App and Mobile App Development
+•	One backend developer working full time for half a year charging $65/hour to develop the backend service, database, etc. = $62,000
+•	1 Android developer working half a year at $65/hour to develop an Android application = $62,000
+•	1 iOS developer for half a year at $70/hour to develop an iOS application = $67,000
+•	1 front end web developer to develop backend and frontend websites at $55/hour = $52,000
+•	1 graphic designer, a quarter of a year at $40/hour to develop designs for the website and apps = $38,000
+•	2 QA engineers for half a year at $35/hour who will begin testing immediately = $67,000
+•	1 PM who organizes all the work within half a year at $55/hour = $52,000
+This project’s budget is approximately $400,000 USD.
+Team Required to Have the Cryptocurrency Exchange Basic Web Portal and Mobile App Developed
+Let’s assess the resources and team required to launch the project with the basic-function web portal. The single way to transfer funds will be to use the cryptocurrency exchange app.
+•	1 full-time backend developer for half a year at $65/hour to develop the backend service, database, etc. = $62,000
+•	1 Android developer for half a year at $65/hour to develop an Android application = $62,000
+•	1 iOS developer for half a year at $70/hour to develop an iOS application = $67,000
+•	1 QA engineer for half a year at $35/hour to begin testing immediately = $33,000
+•	1 PM who organizes all the work within half a year at $55/hour = $52,000 
+The cost for this would be approximately $288,000 USD
+
+
+
+
+
+
+
+
+
+Mobile App and Web Based Application Development Costs Table 
+Specialist	Number of Devs	Months of Engagement	US Hourly Rate	Europe Hourly Rate
+Back-End Developer	1	6	$65/h	$35/h
+Android Developer	1	6	$65/h	$35/h
+iOS Developer	1	6	$70/h	$40/h
+Frontend Web Developer	1	6	$55/h	$35/h
+Graphic Designer	1	4	$40/h	$20/h
+QA Engineer	2	6	$35/h	$15/h
+Project Manager	1	6	$55/h	$25/h
+Total Cost	$403 200	$196 800
+Mobile App and Basic Web Portal Development Costs Table
+Specialist	Number of Devs	Months of Engagement	US Hourly Rate	Europe Hourly Rate
+Back-End Developer	1	6	$65/h	$35/h
+Android Developer	1	6	$65/h	$35/h
+iOS Developer	1	6	$70/h	$40/h
+QA Engineer	1	6	$35/h	$15/h
+Project Manager	1	6	$55/h	$25/h
+Total Cost	$278 400	$144 000
+
+
+
+
+
+In Closing
+Keeping the above prices in mind, it may seem expensive at first, but if you look into the future, the deposit required to produce a cryptocurrency exchange app will offer substantial profit earnings. Its success isn’t contingent on the exchange rate and cryptocurrency state. It’s difficult to predict any currency’s course. The only certainty is that the popularity of cryptocurrency will continue to rise over the next several years, and all market tendencies, be it positive or negative, will result in greater interest in these platforms. To summarize, this cryptocurrency exchange app isn’t contingent on cryptocurrency vacillating course since it is only dependent on transactions of trade which will remain intact forever.
+Cryptocurrencies have never received more attention than they are currently. The market is still new and has a lot of potential for exciting new concepts. We at xpanderlab believe that there are many accomplishments in the industry to be had. If you have any thoughts about blockchain, cryptocurrencies, or something else relevant to this article, leave a comment below. Our team highly appreciates your contributions!
+
+
 
 # Cryptoexchange
 
